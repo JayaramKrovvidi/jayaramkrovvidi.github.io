@@ -1,0 +1,15 @@
+<section id="education">
+    <h2>Education</h2>
+    <ul>
+        <li *ngFor="let edu of educationData">
+            <div class="education-item">
+                <img [src]="edu.imageUrl" alt="Institution Image" />
+                <div class="education-details">
+                    <h3>{{ edu.degree }}</h3>
+                    <p>{{ edu.institution }} | {{ edu.location }}</p>
+                    <p>{{ edu.startDate }} - {{ edu.endDate }}</p>
+                </div>
+            </div>
+        </li>
+    </ul>
+</section>

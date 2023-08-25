@@ -8,11 +8,19 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { HttpClientModule } from '@angular/common/http';
 import { MaterialModule } from './app.material.module';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { AboutMeComponent } from './components/about-me/about-me.component';
+import { EducationComponent } from './components/education/education.component';
+import { WorkExperienceComponent } from './components/work-experience/work-experience.component';
+import { ProjectsComponent } from './components/projects/projects.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    AboutMeComponent,
+    EducationComponent,
+    WorkExperienceComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,

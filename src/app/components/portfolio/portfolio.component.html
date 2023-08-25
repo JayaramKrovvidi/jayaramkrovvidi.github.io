@@ -1,70 +1,25 @@
-<section id="personal-info">
-    <h1>{{ resumeData.name }}</h1>
-    <p>{{ resumeData.location }}</p>
-    <p>{{ resumeData.phone }}</p>
-    <p>{{ resumeData.email }}</p>
-    <a href="{{ resumeData.linkedin }}" target="_blank">LinkedIn</a>
-    <a href="{{ resumeData.github }}" target="_blank">GitHub</a>
-  </section>
-  
-  <section id="education">
-    <h2>Education</h2>
-    <ul>
-      <!-- Loop through the education array -->
-      <li *ngFor="let edu of resumeData.education">{{ edu }}</li>
-    </ul>
-  </section>
-  
+<app-about-me [about]="resumeData.about"></app-about-me>
+<app-education [educationData]="resumeData.education"></app-education>
+<app-work-experience [workExperience]="resumeData.sections[0]"></app-work-experience>
+<app-projects [projects]="resumeData.sections[1]"></app-projects>
 
-<section id="work-experience">
-    <h2>Work Experience</h2>
-    <ul>
-      <!-- Loop through the workExperience array -->
-      <li *ngFor="let experience of sections[0].data">
-        <h3>{{ experience.position }}</h3>
-        <p>{{ experience.company }} | {{ experience.location }}</p>
-        <p>{{ experience.startDate }} - {{ experience.endDate }}</p>
-        <ul>
-            <li *ngFor="let des of experience.description">{{ des }}</li>
-        </ul>
-      </li>
-    </ul>
-  </section>
-  
-  <section id="projects">
-    <h2>Projects</h2>
-    <ul>
-      <!-- Loop through the projects array -->
-      <li *ngFor="let project of sections[1].data">
-        <h3>{{ project.title }}</h3>
-        <p>Technologies: {{ project.technologies.join(', ') }}</p>
-        <a href="{{ project.link }}" target="_blank">GitHub Link</a>
-        <ul>
-            <li *ngFor="let des of project.description">{{ des }}</li>
-        </ul>
-      </li>
-    </ul>
-  </section>
-  
-  <section id="certifications">
-    <h2>Certifications</h2>
-    <ul>
-      <!-- Loop through the certifications array -->
-      <li *ngFor="let certification of sections[2].data">
-        <h3>{{ certification.title }}</h3>
-        <p>{{ certification.issuingOrganization }}</p>
-        <p>Date: {{ certification.date }}</p>
-      </li>
-    </ul>
-  </section>
-  
-  <!-- <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      Loop through the skills array
-      <li *ngFor="let skill of sections[3].data">
-        <p>{{ skill.name }} - {{ skill.proficiency }}</p>
-      </li>
-    </ul>
-  </section> -->
-  
+<section id="certifications">
+  <h2>Certifications</h2>
+  <ul>
+    <li *ngFor="let certification of sections[2].data">
+      <h3>{{ certification.title }}</h3>
+      <p>{{ certification.issuingOrganization }}</p>
+      <p>Date: {{ certification.date }}</p>
+    </li>
+  </ul>
+</section>
+
+<!-- <section id="skills">
+<h2>Skills</h2>
+<ul>
+Loop through the skills array
+<li *ngFor="let skill of sections[3].data">
+<p>{{ skill.name }} - {{ skill.proficiency }}</p>
+</li>
+</ul>
+</section> -->

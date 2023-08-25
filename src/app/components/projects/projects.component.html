@@ -1,0 +1,14 @@
+<section id="projects">
+    <h2>{{projects.title}}</h2>
+    <ul>
+        <!-- Loop through the projects array -->
+        <li *ngFor="let project of projects.data">
+            <h3>{{ project.title }}</h3>
+            <p>Technologies: {{ project.technologies.join(', ') }}</p>
+            <a href="{{ project.link }}" target="_blank">GitHub Link</a>
+            <ul>
+                <li *ngFor="let des of project.description">{{ des }}</li>
+            </ul>
+        </li>
+    </ul>
+</section>

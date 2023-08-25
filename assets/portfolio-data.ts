@@ -52,14 +52,27 @@ export interface SectionData<T> {
 }
 
 export interface ResumeData {
+    about: AboutMe;
+    education: Education[];
+    sections: SectionData<any>[];
+}
+
+export interface Education {
+    degree: string;
+    institution: string;
+    location: string;
+    startDate: string;
+    endDate: string;
+    imageUrl: string;
+}
+
+export interface AboutMe {
     name: string;
     location: string;
     phone: string;
     email: string;
     linkedin: string;
     github: string;
-    education: string[];
-    sections: SectionData<any>[];
 }
 
 export const workExperience: SectionData<WorkExperience> = {
@@ -163,22 +176,30 @@ export const certifications: SectionData<Certification> = {
     ]
 };
 
-export const sections: SectionData<any>[] = [
-    workExperience,
-    projects,
-    certifications
-];
-
 export const resumeData: ResumeData = {
-    name: "Jayarama Das Krovvidi",
-    location: "Stony Brook, NY, USA",
-    phone: "+1 (631)-739-7772",
-    email: "jayaram.krovvidi@outlook.com",
-    linkedin: "https://www.linkedin.com/in/jayaram-krovvidi/",
-    github: "https://github.com/JayaramKrovvidi",
-    education: [
-        "Master of Science in Computer Science - Stony Brook University",
-        "Bachelor of Technology in Computer Science - Manipal Institute of Technology",
-    ],
-    sections: sections,
+    about: {
+        name: "Jayarama Das Krovvidi",
+        location: "Stony Brook, NY, USA",
+        phone: "+1 (631)-739-7772",
+        email: "jayaram.krovvidi@outlook.com",
+        linkedin: "https://www.linkedin.com/in/jayaram-krovvidi/",
+        github: "https://github.com/JayaramKrovvidi",
+    },
+    education: [{
+        degree: "Master of Science in Computer Science",
+        institution: "Stony Brook University",
+        location: "Stony Brook, NY, USA",
+        startDate: "August 2022",
+        endDate: "May 2024",
+        imageUrl: "URL_TO_IMAGE",
+    },
+    {
+        degree: "Bachelor of Technology in Computer Science",
+        institution: "Manipal Institute of Technology",
+        location: "Manipal, Karnataka, India",
+        startDate: "July 2015",
+        endDate: "July 2019",
+        imageUrl: "URL_TO_IMAGE",
+    }],
+    sections: [workExperience, projects, certifications],
 };
