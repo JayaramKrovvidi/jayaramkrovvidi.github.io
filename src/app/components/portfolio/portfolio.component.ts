@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { resumeData } from 'assets/portfolio-data';
 
 @Component({
   selector: 'app-portfolio',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./portfolio.component.scss']
 })
 export class PortfolioComponent {
-
+  resumeData = resumeData;
+  sections = resumeData.sections;
 }
