@@ -8,16 +8,38 @@ import { resumeData } from 'assets/portfolio-data';
 })
 export class PortfolioComponent {
   resumeData = resumeData;
-  sections = resumeData.sections;
 
-  scrollToSection(sectionId: string): void {
-    scrollToElement(sectionId);
+  sections: string[] = ['About Me', 'Education', 'Work Experience', 'Projects', 'Certifications']
+  activeSection: string = 'about';
+  mobileMenuOpen: boolean = false;
+
+  scrollToSection(section: string): void {
+    const sectionElement = document.getElementById(section.toLowerCase().replace(' ', '-'));
+    if (sectionElement) {
+      sectionElement.scrollIntoView({ behavior: 'smooth' });
+      this.mobileMenuOpen = false;
+    }
   }
-}
 
-export function scrollToElement(elementId: string): void {
-  const element = document.getElementById(elementId);
-  if (element) {
-    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  toggleMobileMenu(): void {
+    this.mobileMenuOpen = !this.mobileMenuOpen;
+  }
+
+  updateActiveSection(): void {
+    const scrollPosition = window.scrollY;
+    const sectionOffsets = this.sections.map(section => {
+      const sectionElement = document.getElementById(section.toLowerCase().replace(' ', '-'));
+      return {
+        section,
+        offsetTop: sectionElement ? sectionElement.offsetTop : 0
+      };
+    });
+
+    for (let i = sectionOffsets.length - 1; i >= 0; i--) {
+      if (scrollPosition >= sectionOffsets[i].offsetTop - 100) { // Adjust the offset as needed
+        this.activeSection = sectionOffsets[i].section;
+        break;
+      }
+    }
   }
 }

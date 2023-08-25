@@ -1,16 +1,65 @@
-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #333;
-    color: white;
-    padding: 1rem;
-}
-
 .main-container {
     min-height: 100vh;
 }
 
-.content-container {
+.section {
+    padding-top: 2rem;
+}
+
+#nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
     padding: 1rem;
+    z-index: 1000;
+}
+
+#nav-bar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#nav-bar li {
+    cursor: pointer;
+}
+
+#nav-bar a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+#nav-bar li:hover {
+    color: #ff9900;
+    /* Hover color */
+}
+
+// #nav-bar .profile-info {
+//     /* Style your profile info element here */
+// }
+
+// #nav-bar .mobile-menu-icon {
+//     /* Style your mobile menu icon or button here */
+// }
+
+
+
+#nav-bar .mobile-menu li {
+    margin: 0;
+    padding: 1rem;
+    border-top: 1px solid #666;
+    /* Optional: Add a separator */
+}
+
+#nav-bar .mobile-menu a {
+    color: white;
+    text-decoration: none;
+}
+
+#nav-bar .mobile-menu a:hover {
+    color: #ff9900;
 }
