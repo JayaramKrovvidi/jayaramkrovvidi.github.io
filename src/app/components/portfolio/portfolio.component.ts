@@ -9,4 +9,15 @@ import { resumeData } from 'assets/portfolio-data';
 export class PortfolioComponent {
   resumeData = resumeData;
   sections = resumeData.sections;
+
+  scrollToSection(sectionId: string): void {
+    scrollToElement(sectionId);
+  }
+}
+
+export function scrollToElement(elementId: string): void {
+  const element = document.getElementById(elementId);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
 }

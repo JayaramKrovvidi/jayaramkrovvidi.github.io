@@ -1,18 +1,30 @@
-<app-about-me [about]="resumeData.about"></app-about-me>
-<app-education [educationData]="resumeData.education"></app-education>
-<app-work-experience [workExperience]="resumeData.sections[0]"></app-work-experience>
-<app-projects [projects]="resumeData.sections[1]"></app-projects>
-
-<section id="certifications">
-  <h2>Certifications</h2>
-  <ul>
-    <li *ngFor="let certification of sections[2].data">
-      <h3>{{ certification.title }}</h3>
-      <p>{{ certification.issuingOrganization }}</p>
-      <p>Date: {{ certification.date }}</p>
-    </li>
-  </ul>
-</section>
+<div fxLayout="column" fxLayoutAlign="start stretch" class="main-container">
+  <nav id="nav-bar">
+    <ul>
+      <li><a (click)="scrollToSection('about')">About Me</a></li>
+      <li><a (click)="scrollToSection('education')">Education</a></li>
+      <li><a (click)="scrollToSection('work-experience')">Work Experience</a></li>
+      <li><a (click)="scrollToSection('projects')">Projects</a></li>
+      <li><a (click)="scrollToSection('certifications')">Certifications</a></li>
+    </ul>
+  </nav>
+  <div fxLayout="column" fxLayoutAlign="start stretch" fxFlexOffset="7rem" class="content-container">
+    <app-about-me id="about" [about]="resumeData.about"></app-about-me>
+    <app-education id="education" [educationData]="resumeData.education"></app-education>
+    <app-work-experience id="work-experience" [workExperience]="resumeData.sections[0]"></app-work-experience>
+    <app-projects id="projects" [projects]="resumeData.sections[1]"></app-projects>
+    <section id="certifications">
+      <h2>Certifications</h2>
+      <ul>
+        <li *ngFor="let certification of sections[2].data">
+          <h3>{{ certification.title }}</h3>
+          <p>{{ certification.issuingOrganization }}</p>
+          <p>Date: {{ certification.date }}</p>
+        </li>
+      </ul>
+    </section>
+  </div>
+</div>
 
 <!-- <section id="skills">
 <h2>Skills</h2>
