@@ -12,6 +12,7 @@ import { AboutMeComponent } from './components/about-me/about-me.component';
 import { EducationComponent } from './components/education/education.component';
 import { WorkExperienceComponent } from './components/work-experience/work-experience.component';
 import { ProjectsComponent } from './components/projects/projects.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ProjectsComponent } from './components/projects/projects.component';
     BrowserAnimationsModule,
     MaterialModule,
     FlexLayoutModule,
-    HttpClientModule
+    HttpClientModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
