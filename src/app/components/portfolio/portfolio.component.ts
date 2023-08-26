@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { resumeData } from 'assets/portfolio-data';
 
 @Component({
@@ -6,17 +6,30 @@ import { resumeData } from 'assets/portfolio-data';
   templateUrl: './portfolio.component.html',
   styleUrls: ['./portfolio.component.scss']
 })
-export class PortfolioComponent {
+export class PortfolioComponent implements OnInit {
   resumeData = resumeData;
 
   sections: string[] = ['About Me', 'Education', 'Work Experience', 'Projects', 'Certifications']
-  activeSection: string = 'about';
+  activeSection: string = 'About Me';
   mobileMenuOpen: boolean = false;
+  navbarHeight: any;
+
+  ngOnInit(): void {
+    this.updateActiveSection();
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  onScroll(event: any): void {
+    this.updateActiveSection();
+  }
 
   scrollToSection(section: string): void {
     const sectionElement = document.getElementById(section.toLowerCase().replace(' ', '-'));
     if (sectionElement) {
-      sectionElement.scrollIntoView({ behavior: 'smooth' });
+      const navBar = document.getElementById('nav-bar');
+      const navbarHeight = navBar ? navBar.offsetHeight : 0;
+      const finalScrollPosition = sectionElement.getBoundingClientRect().top + window.scrollY - navbarHeight;
+      window.scrollTo({ top: finalScrollPosition, behavior: 'smooth' });
       this.mobileMenuOpen = false;
     }
   }
