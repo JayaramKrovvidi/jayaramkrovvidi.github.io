@@ -1,0 +1,33 @@
+.personal-info {
+
+    color: white;
+    height: 100vh;
+
+    h1 {
+        font-size: 3rem;
+        font-weight: bold;
+    }
+
+    .contact-details {
+        font-size: 1.5rem;
+    }
+
+    .social-links {
+
+        .social-link {
+
+            i {
+                height: 3rem;
+                width: 3rem;
+            }
+
+            text-decoration: none;
+        }
+    }
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}

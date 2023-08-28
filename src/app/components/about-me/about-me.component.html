@@ -1,8 +1,16 @@
-<section id="personal-info">
+<section class="personal-info" fxLayout="column" fxLayoutAlign="center center">
     <h1>{{ about.name }}</h1>
-    <p>{{ about.location }}</p>
-    <p>{{ about.phone }}</p>
-    <p>{{ about.email }}</p>
-    <a href="{{ about.linkedin }}" target="_blank">LinkedIn</a>
-    <a href="{{ about.github }}" target="_blank">GitHub</a>
+    <div class="contact-details" fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="0.5rem">
+        <p>{{ about.location }}</p>
+        <p>{{ about.phone }}</p>
+        <p>{{ about.email }}</p>
+    </div>
+    <div class="social-links" fxLayout="row" fxLayoutGap="10px">
+        <a href="{{ about.linkedin }}" target="_blank" class="social-link">
+            <i class="devicon-linkedin-plain-wordmark colored"></i>
+        </a>
+        <a href="{{ about.github }}" target="_blank" class="social-link">
+            <i class="devicon-github-original-wordmark colored"></i>
+        </a>
+    </div>
 </section>
