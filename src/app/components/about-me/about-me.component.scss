@@ -15,10 +15,18 @@
     .social-links {
 
         .social-link {
+            cursor: pointer;
 
             i {
-                height: 3rem;
-                width: 3rem;
+                font-size: 3rem;
+
+                &.linkedin {
+                    color: rgb(0, 118, 178);
+                }
+
+                &.github {
+                    color: white;
+                }
             }
 
             text-decoration: none;

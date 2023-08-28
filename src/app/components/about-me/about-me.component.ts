@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { AboutMe } from 'assets/portfolio-data';
+import { AboutMe } from 'portfolio-data';
 
 @Component({
   selector: 'app-about-me',
