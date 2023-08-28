@@ -1,15 +1,19 @@
-<section id="education">
-    <h2>Education</h2>
-    <ul>
-        <li *ngFor="let edu of educationData">
-            <div class="education-item">
-                <img [src]="edu.imageUrl" alt="Institution Image" />
-                <div class="education-details">
-                    <h3>{{ edu.degree }}</h3>
-                    <p>{{ edu.institution }} | {{ edu.location }}</p>
-                    <p>{{ edu.startDate }} - {{ edu.endDate }}</p>
-                </div>
+<div class="card" fxLayout="column" (click)="toggleExpanded()">
+    <div class="card-header" fxLayout="row" fxLayoutAlign="start center">
+        <img [src]="education.imageUrl" alt="University Logo" class="logo">
+        <div fxFlex fxLayout="column">
+            <div fxLayout="row" fxLayoutAlign="space-between center">
+                <h2>{{ education.institution }}</h2>
+                <h2>{{ education.startDate }} - {{ education.endDate }}</h2>
             </div>
-        </li>
-    </ul>
-</section>
+            <div fxLayout="row">
+                <h3>{{ education.shortDescription }}</h3>
+            </div>
+        </div>
+    </div>
+    <div class="card-content" [@expandAnimation]="expanded ? 'expanded' : 'collapsed'">
+        <div class="expanded-content">
+            <p>{{ education.detailedDescription }}</p>
+        </div>
+    </div>
+</div>

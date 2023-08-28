@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Project, SectionData } from 'assets/portfolio-data';
+import { Project, SectionData } from 'portfolio-data';
 
 @Component({
   selector: 'app-projects',

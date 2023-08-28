@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { SectionData, WorkExperience } from 'assets/portfolio-data';
+import { SectionData, WorkExperience } from 'portfolio-data';
 
 @Component({
   selector: 'app-work-experience',
