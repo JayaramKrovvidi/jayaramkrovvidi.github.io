@@ -64,6 +64,8 @@ export interface Education {
     startDate: string;
     endDate: string;
     imageUrl: string;
+    shortDescription: string;
+    detailedDescription: string;
 }
 
 export interface AboutMe {
@@ -191,7 +193,9 @@ export const resumeData: ResumeData = {
         location: "Stony Brook, NY, USA",
         startDate: "August 2022",
         endDate: "May 2024",
-        imageUrl: "URL_TO_IMAGE",
+        imageUrl: "../../../assets/img/sbu-logo.png",
+        shortDescription: "Ms in Computer Science at Stony Brook University",
+        detailedDescription: "I am currently pursuing my Master's in Computer Science at Stony Brook University."
     },
     {
         degree: "Bachelor of Technology in Computer Science",
@@ -199,7 +203,11 @@ export const resumeData: ResumeData = {
         location: "Manipal, Karnataka, India",
         startDate: "July 2015",
         endDate: "July 2019",
-        imageUrl: "URL_TO_IMAGE",
+        imageUrl: "../../../assets/img/mit-logo-light.png",
+        shortDescription: "B.Tech in Computer Science at Manipal Institute of Technology",
+        detailedDescription: "I completed my Bachelor's in Computer Science at Manipal Institute of Technology."
     }],
     sections: [workExperience, projects, certifications],
 };
+
+const mitLogo = "https://jade-donut-27ebe5.netlify.app/mit-logo.png";
