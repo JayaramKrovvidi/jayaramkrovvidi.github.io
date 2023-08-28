@@ -1,0 +1,57 @@
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+body {
+    background-color: #222;
+}
+
+.wrapper {
+    overflow: hidden;
+}
+
+.gradient-wrapper {
+    height: 0px;
+    width: 0px;
+    position: relative;
+    /* Needed for z-index to work */
+}
+
+.gradient {
+    --size: 60%;
+    --speed: 50s;
+    --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
+
+    box-sizing: border-box;
+    position: absolute;
+    /* Position the gradient within the wrapper */
+    width: var(--size);
+    height: var(--size);
+    filter: blur(calc(var(--size) / 5));
+    background-image: linear-gradient(hsla(218, 82%, 57%, 0.07),
+            hsla(303, 82%, 57%, 0.07));
+    animation: rotate var(--speed) var(--easing) alternate infinite;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+
+    /* Adjust opacity to your preference */
+    opacity: 0.9;
+    z-index: 1;
+    /* Ensure the gradient is below the text */
+}
+
+@media (min-width: 720px) {
+    .gradient {
+        --size: 200px;
+    }
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+}
