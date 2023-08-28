@@ -1,5 +1,5 @@
 import { Component, OnInit, HostListener } from '@angular/core';
-import { resumeData } from 'assets/portfolio-data';
+import { resumeData } from 'portfolio-data';
 
 @Component({
   selector: 'app-portfolio',

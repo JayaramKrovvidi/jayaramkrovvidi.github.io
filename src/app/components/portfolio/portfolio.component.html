@@ -27,7 +27,8 @@
   </nav>
   <div fxLayout="column" fxLayoutAlign="start stretch" class="content-container">
     <app-about-me id="about-me" class="section" [about]="resumeData.about"></app-about-me>
-    <app-education id="education" class="section" [educationData]="resumeData.education"></app-education>
+    <app-education *ngFor="let education of resumeData.education" id="education" class="section"
+      [education]="education"></app-education>
     <app-work-experience id="work-experience" class="section"
       [workExperience]="resumeData.sections[0]"></app-work-experience>
     <app-projects id="projects" class="section" [projects]="resumeData.sections[1]"></app-projects>
