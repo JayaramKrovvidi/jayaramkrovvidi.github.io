@@ -1,0 +1,26 @@
+<nav class="nav-bar" fxLayout="column">
+    <div fxLayout="row" class="header" fxLayoutAlign="space-between center">
+      <div fxHide fxShow.lt-sm (click)="toggleMobileMenu()">
+        <button mat-button>
+          <mat-icon class="white-icon">menu</mat-icon>
+        </button>
+      </div>
+      <div class="profile-info">
+        <div class="initials">JDK</div>
+      </div>
+      <ul fxLayout="row" fxHide.lt-sm fxLayoutAlign="end center" fxLayoutGap="1rem">
+        <li *ngFor="let section of sectionOrder" [class.active]="currentSection === section">
+          <a (click)="sectionClicked(section)">
+            <h3>{{ sections.get(section) }}</h3>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <ul *ngIf="mobileMenuOpen" fxLayout="column" fxHide.gt-xs fxLayoutAlign="space between center">
+      <li *ngFor="let section of sections | keyvalue" [class.active]="currentSection === section.key">
+        <a (click)="sectionClicked(section.key)">
+          <h3>{{ section.value }}</h3>
+        </a>
+      </li>
+    </ul>
+  </nav>

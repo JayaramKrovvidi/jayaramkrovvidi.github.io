@@ -1,35 +1,14 @@
 <div fxLayout="column" fxLayoutAlign="start stretch" class="main-container">
-  <nav id="nav-bar" fxLayout="column">
-    <div fxLayout="row" class="header" fxLayoutAlign="space-between center">
-      <div fxHide fxShow.lt-sm (click)="toggleMobileMenu()">
-        <button mat-button>
-          <mat-icon class="white-icon">menu</mat-icon>
-        </button>
-      </div>
-      <div class="profile-info">
-        <div class="initials">JDK</div>
-      </div>
-      <ul fxLayout="row" fxHide.lt-sm fxLayoutAlign="end center" fxLayoutGap="1rem">
-        <li *ngFor="let section of sections" [class.active]="activeSection === section">
-          <a (click)="scrollToSection(section)">
-            <h3>{{ section }}</h3>
-          </a>
-        </li>
-      </ul>
-    </div>
-    <ul *ngIf="mobileMenuOpen" fxLayout="column" fxHide.gt-xs fxLayoutAlign="space between center">
-      <li *ngFor="let section of sections" [class.active]="activeSection === section">
-        <a (click)="scrollToSection(section)">
-          <h3>{{ section }}</h3>
-        </a>
-      </li>
-    </ul>
-  </nav>
+  <app-nav-bar [sections]="sections" [currentSection]="currentSection" [sectionOrder]="sectionOrder"
+    (sectionChange)="scrollToSection($event)"></app-nav-bar>
   <div fxLayout="column" fxLayoutAlign="start stretch" class="content-container">
-    <app-about-me id="about-me" class="section" [about]="resumeData.about"></app-about-me>
-    <app-education *ngFor="let education of resumeData.education" id="education" class="section"
-      [education]="education"></app-education>
-    <app-work-experience id="work-experience" class="section"
+    <app-about-me id="about" class="section" [about]="resumeData.about"></app-about-me>
+
+    <section id="education" class="section">
+      <app-education *ngFor="let education of resumeData.education" [education]="education"></app-education>
+    </section>
+
+    <app-work-experience id="experience" class="section"
       [workExperience]="resumeData.sections[0]"></app-work-experience>
     <app-projects id="projects" class="section" [projects]="resumeData.sections[1]"></app-projects>
     <section id="certifications">

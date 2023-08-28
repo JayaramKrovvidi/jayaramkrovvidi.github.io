@@ -1,52 +1,18 @@
-.initials {
-    font-family: Satisfy;
-    font-size: 2rem;
-}
-
-.white-icon {
-    height: 2rem !important;
-    width: 2rem !important;
-    font-size: 2rem !important;
-    color: white;
+app-nav-bar {
+    position: sticky;
+    top: 0;
 }
 
 #certifications {
     min-height: 100vh;
 }
 
-#nav-bar {
-    position: sticky;
-    top: 0;
-    width: 100%;
-    color: white;
-    padding: 1rem;
-    z-index: 1000;
 
-    ul {
-        list-style: none;
-        margin: 0;
-
-        li {
-            cursor: pointer;
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-
-            &:hover {
-                color: #ff9900;
-            }
-
-            &.active {
-                border-bottom: 5px solid gray;
-            }
-        }
-    }
-}
 
 .content-container {
     overflow-y: auto;
 }
 
-app-education {
+.section {
     padding: 1rem;
 }

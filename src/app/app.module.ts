@@ -13,6 +13,7 @@ import { EducationComponent } from './components/education/education.component';
 import { WorkExperienceComponent } from './components/work-experience/work-experience.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     AboutMeComponent,
     EducationComponent,
     WorkExperienceComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
 import { resumeData } from 'portfolio-data';
 
 @Component({
@@ -6,53 +6,31 @@ import { resumeData } from 'portfolio-data';
   templateUrl: './portfolio.component.html',
   styleUrls: ['./portfolio.component.scss']
 })
-export class PortfolioComponent implements OnInit {
+export class PortfolioComponent {
+
+  constructor(private el: ElementRef) {}
+
   resumeData = resumeData;
 
-  sections: string[] = ['About Me', 'Education', 'Work Experience', 'Projects', 'Certifications']
-  activeSection: string = 'About Me';
-  mobileMenuOpen: boolean = false;
-  navbarHeight: any;
+  sections: Map<string, string> = new Map<string, string>([
+    ['about', 'About Me'],
+    ['education', 'Education'],
+    ['experience', 'Work Experience'],
+    ['projects', 'Projects'],
+    ['certifications', 'Skills']
+  ]);
 
-  ngOnInit(): void {
-    this.updateActiveSection();
-  }
-
-  @HostListener('window:scroll', ['$event'])
-  onScroll(event: any): void {
-    this.updateActiveSection();
-  }
+  sectionOrder: string[] = ['about', 'education', 'experience', 'projects', 'certifications'];
+  currentSection: string = 'about';
 
   scrollToSection(section: string): void {
-    const sectionElement = document.getElementById(section.toLowerCase().replace(' ', '-'));
+    const sectionElement = document.getElementById(section);
     if (sectionElement) {
-      const navBar = document.getElementById('nav-bar');
+      const navBar = this.el.nativeElement.querySelector('.nav-bar');
       const navbarHeight = navBar ? navBar.offsetHeight : 0;
       const finalScrollPosition = sectionElement.getBoundingClientRect().top + window.scrollY - navbarHeight;
       window.scrollTo({ top: finalScrollPosition, behavior: 'smooth' });
-      this.mobileMenuOpen = false;
     }
   }
-
-  toggleMobileMenu(): void {
-    this.mobileMenuOpen = !this.mobileMenuOpen;
-  }
-
-  updateActiveSection(): void {
-    const scrollPosition = window.scrollY;
-    const sectionOffsets = this.sections.map(section => {
-      const sectionElement = document.getElementById(section.toLowerCase().replace(' ', '-'));
-      return {
-        section,
-        offsetTop: sectionElement ? sectionElement.offsetTop : 0
-      };
-    });
-
-    for (let i = sectionOffsets.length - 1; i >= 0; i--) {
-      if (scrollPosition >= sectionOffsets[i].offsetTop - 100) { // Adjust the offset as needed
-        this.activeSection = sectionOffsets[i].section;
-        break;
-      }
-    }
-  }
+  
 }
