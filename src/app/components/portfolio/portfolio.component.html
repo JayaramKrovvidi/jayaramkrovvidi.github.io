@@ -4,7 +4,7 @@
   <div fxLayout="column" fxLayoutAlign="start stretch" class="content-container">
     <app-about-me id="about" class="section" [about]="resumeData.about"></app-about-me>
 
-    <section id="education" class="section">
+    <section id="education" class="section" fxLayout="column" fxLayoutGap="1rem">
       <app-education *ngFor="let education of resumeData.education" [education]="education"></app-education>
     </section>
 
