@@ -1,11 +1,21 @@
 <section class="personal-info" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="1rem">
     <h1>{{ about.name }}</h1>
-    <div class="contact-details" fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="0.5rem">
-        <p>{{ about.location }}</p>
-        <p>{{ about.phone }}</p>
-        <p>{{ about.email }}</p>
+    <div class="contact-details" fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="2rem">
+        <a fxLayout="row" fxLayoutGap="0.5rem" href="https://www.google.com/maps/search/{{ about.location }}"
+            target="_blank">
+            <i class="bi bi-geo-alt-fill"></i>
+            <p>{{ about.location }}</p>
+        </a>
+        <a fxLayout="row" fxLayoutGap="0.5rem" href="https://www.google.com/maps/search/{{ about.location }}"
+            target="_blank">
+            <i class="bi bi-telephone-fill"></i>
+            <p>{{ about.phone }}</p>
+        </a>
     </div>
-    <div class="social-links" fxLayout="row" fxLayoutGap="10px">
+    <div class="social-links" fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="10px">
+        <a href="{{ 'mailto:' + about.email }}" target="_blank" class="social-link email">
+            <i class="bi bi-envelope-at-fill email"></i>
+        </a>
         <a href="{{ about.linkedin }}" target="_blank" class="social-link linkedin">
             <i class="devicon-linkedin-plain linkedin"></i>
         </a>

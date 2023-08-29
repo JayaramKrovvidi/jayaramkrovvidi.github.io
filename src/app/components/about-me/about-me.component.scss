@@ -10,6 +10,18 @@
 
     .contact-details {
         font-size: 1.5rem;
+        text-decoration: none;
+        
+        a {
+            color: white;
+            &:visited {
+                color: white;
+            }
+
+            &:hover {
+                color: lightgray;
+            }
+        }
     }
 
     .social-links {
@@ -26,6 +38,10 @@
 
                 &.github {
                     color: white;
+                }
+
+                &.email {
+                    color: white
                 }
             }
 
