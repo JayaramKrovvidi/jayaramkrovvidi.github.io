@@ -1,12 +1,10 @@
-<div fxLayout="row" fxLayoutAlign="center">
-  <app-card fxFlex="80">
-    <img roundImage headerImage [src]="workExperience.companyLogo" alt="Company Logo">
-    <p headerText>{{workExperience.position}} @ {{ workExperience.company }}</p>
-    <p subHeaderText>{{ workExperience.position }}</p>
-    <p dates>{{ workExperience.startDate }} - {{ workExperience.endDate }}</p>
-    <!-- <ul description>
+<app-card fxFlex="100">
+  <img roundImage headerImage [src]="workExperience.companyLogo" alt="Company Logo">
+  <h2 headerText>{{ workExperience.company }}</h2>
+  <p subHeaderText>{{ workExperience.position }}</p>
+  <p dates>{{ workExperience.startDate }} - {{ workExperience.endDate }}</p>
+  <!-- <ul description>
       <li *ngFor="let des of workExperience.description">{{ des }}</li>
     </ul> -->
-    <p description style="text-align: justify;"><i>"{{ workExperience.summary }}"</i></p>
-  </app-card>
-</div>
+  <p description style="text-align: justify;"><i>"{{ workExperience.summary }}"</i></p>
+</app-card>

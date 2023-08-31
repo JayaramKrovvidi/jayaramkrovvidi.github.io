@@ -1,6 +1,6 @@
-<app-card>
+<app-card fxFlex="100">
     <img roundImage headerImage [src]="education.imageUrl" alt="University Logo">
-    <p headerText>{{ education.institution }}</p>
+    <h2 headerText>{{ education.institution }}</h2>
     <p dates>{{ education.startDate }} - {{ education.endDate }}</p>
     <p description style="text-align: justify;"><i>"{{ education.detailedDescription }}"</i></p>
 </app-card>
