@@ -3,18 +3,13 @@
     color: white;
     height: 100vh;
 
-    h1 {
-        font-size: 2.5rem;
-        font-weight: bold;
-    }
-
     .contact-details {
-        font-size: 1.5rem;
         text-decoration: none;
         white-space: nowrap;
-        
+
         a {
             color: white;
+
             &:visited {
                 color: white;
             }
@@ -31,7 +26,7 @@
             cursor: pointer;
 
             i {
-                font-size: 3rem;
+                font-size: 2rem;
 
                 &.linkedin {
                     color: rgb(0, 118, 178);
@@ -49,10 +44,4 @@
             text-decoration: none;
         }
     }
-}
-
-h1 {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 10px;
 }

@@ -3,6 +3,10 @@ app-nav-bar {
     top: 0;
 }
 
+app-education, app-work-experience, app-projects {
+    margin: 0.5rem;
+}
+
 #certifications {
     min-height: 100vh;
 }

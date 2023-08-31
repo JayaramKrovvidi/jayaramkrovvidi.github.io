@@ -1,15 +1,16 @@
-<section class="personal-info" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="1rem">
+<div class="personal-info" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="1rem">
     <h1>{{ about.name }}</h1>
-    <div class="contact-details" fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="2rem">
+    <div class="contact-details" fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign="space-between center"
+        fxLayoutGap="2rem">
         <a fxLayout="row" fxLayoutGap="0.5rem" href="https://www.google.com/maps/search/{{ about.location }}"
             target="_blank">
             <i class="bi bi-geo-alt-fill"></i>
-            <p>{{ about.location }}</p>
+            <h2>{{ about.location }}</h2>
         </a>
         <a fxLayout="row" fxLayoutGap="0.5rem" href="https://www.google.com/maps/search/{{ about.location }}"
             target="_blank">
             <i class="bi bi-telephone-fill"></i>
-            <p>{{ about.phone }}</p>
+            <h2>{{ about.phone }}</h2>
         </a>
     </div>
     <div class="social-links" fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="10px">
@@ -23,4 +24,4 @@
             <i class="devicon-github-original github"></i>
         </a>
     </div>
-</section>
+</div>
