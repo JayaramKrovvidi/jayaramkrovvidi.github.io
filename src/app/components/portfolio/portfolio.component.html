@@ -4,20 +4,22 @@
   <div fxLayout="row">
     <div fxFlex="10"></div>
     <div fxLayout="column" fxLayoutAlign="start stretch" class="content-container">
-      <app-about-me id="about" class="section" [about]="resumeData.about"></app-about-me>
+      <app-about-me id="about" [about]="resumeData.about"></app-about-me>
 
-      <section id="education" class="section" fxLayout="row" fxLayoutAlign="center" fxLayoutGap="2rem"
-        fxLayout.lt-md="column" fxLayoutAlign.lt-md="space-between">
+      <h1 style="color: white; text-align: center; margin: 2rem;">Education</h1>
+      <section id="education" fxLayout="row" fxLayoutAlign="center" fxLayoutGap="2rem" fxLayout.lt-md="column"
+        fxLayoutAlign.lt-md="space-between">
         <app-education fxFlex="40" *ngFor="let education of resumeData.education"
           [education]="education"></app-education>
       </section>
 
-      <section id="experience" class="section" fxLayout="column" fxLayoutAlign="space-between center">
+      <h1 style="color: white; text-align: center; margin: 2rem;">Work Experience</h1>
+      <section id="experience" fxLayout="column" fxLayoutAlign="space-between center" fxLayoutGap="3rem">
         <app-work-experience *ngFor="let experience of resumeData.sections[0].data"
           [workExperience]="experience"></app-work-experience>
       </section>
 
-      <app-projects id="projects" class="section" [projects]="resumeData.sections[1]"></app-projects>
+      <app-projects id="projects" [projects]="resumeData.sections[1]"></app-projects>
       <section id="certifications">
         <h2>Certifications</h2>
         <ul>
