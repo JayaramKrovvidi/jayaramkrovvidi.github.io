@@ -195,7 +195,7 @@ export const resumeData: ResumeData = {
         endDate: "May 2024",
         imageUrl: "../../../assets/img/sbu-logo.png",
         shortDescription: "Ms in Computer Science at Stony Brook University",
-        detailedDescription: "I am currently pursuing my Master's in Computer Science at Stony Brook University."
+        detailedDescription: "In my pursuit of higher knowledge, I embarked on a transformative journey at Stony Brook University for my Master of Science in Computer Science. This academic endeavor has propelled my understanding of advanced concepts, honed my problem-solving skills, and expanded my technical expertise. With a current CGPA of 3.95/4.0, I have been able to dive deep into subjects like data visualization, natural language processing, and computational biology, further enriching my understanding of the diverse facets of computer science. The graduate program at Stony Brook has not only equipped me with cutting-edge knowledge but has also nurtured my ability to collaborate and contribute effectively in a team-oriented environment. This experience has been instrumental in shaping my identity as a dynamic and committed software developer, poised to make significant contributions to the industry."
     },
     {
         degree: "Bachelor of Technology in Computer Science",
@@ -205,7 +205,7 @@ export const resumeData: ResumeData = {
         endDate: "July 2019",
         imageUrl: "../../../assets/img/mit-logo-light.png",
         shortDescription: "B.Tech in Computer Science at Manipal Institute of Technology",
-        detailedDescription: "I completed my Bachelor's in Computer Science at Manipal Institute of Technology."
+        detailedDescription: "During my undergraduate journey at Manipal Institute of Technology (MIT), I had the privilege to immerse myself in the world of Computer Science. With a keen curiosity for intelligent systems, I pursued a Bachelor of Technology degree, specializing in Computer Science. Throughout my studies, I cultivated a solid foundation in a spectrum of subjects, from data structures and algorithms to artificial intelligence and machine learning. My CGPA of 8.72/10 reflects my dedication to academic excellence and my passion for mastering the intricacies of the field. Collaborative projects, engaging coursework, and interactive learning experiences at MIT have significantly shaped my understanding and love for technology, paving the way for my continued growth and accomplishments in the software development arena."
     }],
     sections: [workExperience, projects, certifications],
 };

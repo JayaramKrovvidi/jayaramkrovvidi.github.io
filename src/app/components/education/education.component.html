@@ -1,19 +1,6 @@
-<div class="card" fxLayout="column" (click)="toggleExpanded()">
-    <div class="card-header" fxLayout="row" fxLayoutAlign="start center">
-        <img [src]="education.imageUrl" alt="University Logo" class="logo">
-        <div fxFlex fxLayout="column">
-            <div fxLayout="row" fxLayoutAlign="space-between center">
-                <h2>{{ education.institution }}</h2>
-                <h2>{{ education.startDate }} - {{ education.endDate }}</h2>
-            </div>
-            <div fxLayout="row">
-                <h3>{{ education.shortDescription }}</h3>
-            </div>
-        </div>
-    </div>
-    <div class="card-content" [@expandAnimation]="expanded ? 'expanded' : 'collapsed'">
-        <div class="expanded-content">
-            <p>{{ education.detailedDescription }}</p>
-        </div>
-    </div>
-</div>
+<app-card>
+    <img roundImage headerImage [src]="education.imageUrl" alt="University Logo">
+    <p headerText>{{ education.institution }}</p>
+    <p dates>{{ education.startDate }} - {{ education.endDate }}</p>
+    <p description><i>"{{ education.detailedDescription }}"</i></p>
+</app-card>
