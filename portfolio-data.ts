@@ -1,10 +1,12 @@
 export interface WorkExperience {
     position: string;
     company: string;
+    companyLogo: string;
     location: string;
     startDate: string;
     endDate: string;
     description: string[];
+    summary: string;
 }
 
 export interface Project {
@@ -81,8 +83,22 @@ export const workExperience: SectionData<WorkExperience> = {
     title: "Work Experience",
     data: [
         {
+            position: "Graduate Teaching Assistant",
+            company: "Stony Brook University",
+            companyLogo: "../../../assets/img/sbu-logo.png",
+            location: "Stony Brook, NY, USA",
+            startDate: "January 2023",
+            endDate: "May 2023",
+            description: [
+                "Acted as a Teaching Assistant for CSE 354 (Natural Language Processing) under Prof. Niranjan Balasubramanian.",
+                "Work includes proctoring, conducting office hours, grading, designing assignments, and maintaining lecture notes."
+            ],
+            summary: "As a Graduate Teaching Assistant at Stony Brook University, I immersed myself in education and academic support, assisting Professor Niranjan Balasubramanian in the course CSE 354 (Natural Language Processing). I fostered a structured learning environment by proctoring exams, conducting office hours for personalized guidance, and designing engaging assignments. I facilitated effective learning, leveraging my technical expertise to contribute to the growth and success of aspiring computer science students."
+        },
+        {
             position: "Senior Software Engineer",
             company: "Accolite Digital Inc.",
+            companyLogo: "../../../assets/img/accolite-logo.png",
             location: "Bengaluru, India",
             startDate: "September 2020",
             endDate: "July 2022",
@@ -93,11 +109,13 @@ export const workExperience: SectionData<WorkExperience> = {
                 "Worked as a senior on-call developer and resolved over 250 real-time customer issues with priority-based escalation.",
                 "Responsible for maintaining code quality and conducting collaborative code review sessions for juniors and peers.",
                 "Awarded Best Trainer for a comprehensive session on Hibernate, JPA, and Advanced DB Frameworks for new interns."
-            ]
+            ],
+            summary: "As a Senior Software Developer at Accolite, I led the design and development of a generic Payments Integration engine in Flask for CoinSwitch, significantly improving code reusability. I implemented load-balancing logic to enhance user responsiveness by dynamically routing payments across gateways. Additionally, I devised the Streaming Downloader, a data source paginator, reducing user wait time by 30%. With a strong focus on maintaining code quality, I conducted collaborative code review sessions and resolved over 250 real-time customer issues with priority-based escalation. Throughout my tenure, I demonstrated expertise in software architecture, problem-solving, and mentoring junior developers."
         },
         {
             position: "Software Engineer",
             company: "Accolite Digital Inc.",
+            companyLogo: "../../../assets/img/accolite-logo.png",
             location: "Bengaluru, India",
             startDate: "July 2019",
             endDate: "August 2020",
@@ -108,10 +126,12 @@ export const workExperience: SectionData<WorkExperience> = {
                 "Augmented the backend for a Crew Evaluation service with SQL views, caching & refresh logic, reducing DB hits by 50%.",
                 "Designed a normalized DB schema for an Automated chatbot with configuration, interpolation, and validation modules."
             ],
+            summary: "As a Software Developer at Accolite, I played a crucial role in developing a CRM Integration Tool that effectively collected and interpreted data from CRMs such as Salesforce and MS Dynamics 365. Collaborating with a cross-functional team, I contributed to the design and implementation of an alerting push notification system for FedEx, reducing the wait time for their flight crew. I also implemented the full-stack dashboard module for this system, saving valuable time by automating daily report generation. Additionally, I enhanced the backend of a Crew Evaluation service with SQL views, caching, and refresh logic, resulting in a 50% reduction in database hits. My work showcased proficiency in software development, collaboration, and database optimization."
         },
         {
             position: "Software Engineer Intern",
             company: "Accolite Digital Inc.",
+            companyLogo: "../../../assets/img/accolite-logo.png",
             location: "Bengaluru, India",
             startDate: "January 2019",
             endDate: "June 2019",
@@ -120,17 +140,7 @@ export const workExperience: SectionData<WorkExperience> = {
                 "Secured Runner up in this training campaign while competing with over 70 interns across all other company locations.",
                 "Implemented all frontend modules for the Pilot Info Tracker with a responsive UI using Angular Flex layout and SCSS."
             ],
-        },
-        {
-            position: "Graduate Teaching Assistant",
-            company: "Stony Brook University",
-            location: "Stony Brook, NY, USA",
-            startDate: "January 2023",
-            endDate: "May 2023",
-            description: [
-                "Acted as a Teaching Assistant for CSE 354 (Natural Language Processing) under Prof. Niranjan Balasubramanian.",
-                "Work includes proctoring, conducting office hours, grading, designing assignments, and maintaining lecture notes."
-            ],
+            summary: "During my internship at Accolite, I completed an intensive two-month training program called Accolite University, where I gained hands-on experience in the software development life cycle. As part of the program, I developed the front-end modules for the Pilot Info Tracker, a responsive web application using Angular Flex layout and SCSS. I demonstrated my ability to adapt to new technologies while securing the runner-up position among over 70 interns. This experience allowed me to contribute to developing real-world projects and acquire valuable front-end development and user interface design skills."
         }
     ]
 };

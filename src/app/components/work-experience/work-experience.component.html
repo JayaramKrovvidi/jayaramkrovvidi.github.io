@@ -1,14 +1,12 @@
-<section id="work-experience">
-    <h2>{{workExperience.title}}</h2>
-    <ul>
-      <!-- Loop through the workExperience array -->
-      <li *ngFor="let experience of workExperience.data">
-        <h3>{{ experience.position }}</h3>
-        <p>{{ experience.company }} | {{ experience.location }}</p>
-        <p>{{ experience.startDate }} - {{ experience.endDate }}</p>
-        <ul>
-          <li *ngFor="let des of experience.description">{{ des }}</li>
-        </ul>
-      </li>
-    </ul>
-  </section>
+<div fxLayout="row" fxLayoutAlign="center">
+  <app-card fxFlex="80">
+    <img roundImage headerImage [src]="workExperience.companyLogo" alt="Company Logo">
+    <p headerText>{{workExperience.position}} @ {{ workExperience.company }}</p>
+    <p subHeaderText>{{ workExperience.position }}</p>
+    <p dates>{{ workExperience.startDate }} - {{ workExperience.endDate }}</p>
+    <!-- <ul description>
+      <li *ngFor="let des of workExperience.description">{{ des }}</li>
+    </ul> -->
+    <p description style="text-align: justify;"><i>"{{ workExperience.summary }}"</i></p>
+  </app-card>
+</div>

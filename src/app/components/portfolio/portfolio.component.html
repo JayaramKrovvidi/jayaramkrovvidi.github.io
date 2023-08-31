@@ -12,8 +12,11 @@
           [education]="education"></app-education>
       </section>
 
-      <app-work-experience id="experience" class="section"
-        [workExperience]="resumeData.sections[0]"></app-work-experience>
+      <section id="experience" class="section" fxLayout="column" fxLayoutAlign="space-between center">
+        <app-work-experience *ngFor="let experience of resumeData.sections[0].data"
+          [workExperience]="experience"></app-work-experience>
+      </section>
+
       <app-projects id="projects" class="section" [projects]="resumeData.sections[1]"></app-projects>
       <section id="certifications">
         <h2>Certifications</h2>

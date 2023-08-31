@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { SectionData, WorkExperience } from 'portfolio-data';
+import { WorkExperience } from 'portfolio-data';
 
 @Component({
   selector: 'app-work-experience',
@@ -9,5 +9,5 @@ import { SectionData, WorkExperience } from 'portfolio-data';
 export class WorkExperienceComponent {
 
   @Input()
-  workExperience!: SectionData<WorkExperience>;
+  workExperience!: WorkExperience;
 }
