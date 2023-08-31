@@ -14,6 +14,8 @@ import { WorkExperienceComponent } from './components/work-experience/work-exper
 import { ProjectsComponent } from './components/projects/projects.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { CardComponent } from './components/card/card.component';
+import { RoundImageDirective } from './directives/roundimage.directive';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
     EducationComponent,
     WorkExperienceComponent,
     ProjectsComponent,
-    NavBarComponent
+    NavBarComponent,
+    CardComponent,
+    RoundImageDirective
   ],
   imports: [
     BrowserModule,

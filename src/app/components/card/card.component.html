@@ -1,0 +1,18 @@
+<div class="card" fxLayout="column">
+    <div class="card-header" fxLayout="column" fxLayoutAlign="center center">
+        <div class="header-image">
+            <ng-content select="[headerImage]"></ng-content>
+        </div>
+        <div class="header-title">
+            <ng-content select="[headerText]"></ng-content>
+        </div>
+        <div class="dates">
+            <ng-content select="[dates]"></ng-content>
+        </div>
+    </div>
+    <div fxLayout="column" class="card-body">
+        <div class="description">
+            <ng-content select="[description]"></ng-content>
+        </div>
+    </div>
+</div>

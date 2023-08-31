@@ -1,0 +1,40 @@
+.card {
+    box-sizing: border-box;
+    border: 2px solid transparent;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: rgba(34, 34, 34, 0.4);
+    border-color: rgba(200, 200, 200, 0.3);
+    color: white;
+    transition: border-color 0.3s ease-in-out;
+    transition: background-color 0.1s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgba(60, 60, 60, 0.3);
+        border-color: rgba(200, 200, 200, 0.6);
+    }
+
+    .card-header {
+        font-weight: bold;
+
+        .header-title {
+            font-size: 2rem;
+            text-decoration: underline;
+            white-space: nowrap;
+        }
+
+        .dates {
+            font-size: 1.5rem;
+        }
+    }
+
+    .card-body {
+        overflow: hidden;
+
+
+        .description {
+            font-size: 1rem;
+        }
+    }
+}
