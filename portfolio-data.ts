@@ -12,7 +12,10 @@ export interface WorkExperience {
 export interface Project {
     title: string;
     technologies: string[];
+    startDate: string;
+    endDate: string;
     link?: string;
+    summary: string;
     description: string[];
 }
 
@@ -152,6 +155,9 @@ export const projects: SectionData<Project> = {
             title: "College Compass",
             technologies: ["Angular", "D3.js", "Flask"],
             link: "https://github.com/yourusername/college-compass",
+            startDate: "January 2023",
+            endDate: "May 2023",
+            summary: "College Compass is a dynamic and user-friendly platform designed to guide students through the complex landscape of higher education. With a seamless integration of data visualization and insightful analytics, it empowers students to make informed decisions about colleges and universities. From interactive maps showcasing campus locations to comprehensive charts depicting tuition trends and application statistics, College Compass provides a holistic view of educational institutions. This tool equips students with the information they need to navigate their academic journey with confidence, enabling them to select institutions that align with their aspirations and goals.",
             description: [
                 "College Compass is a D3.js and Angular-powered visualization dashboard to explore and compare college admission data.",
                 "This data is sourced and processed from the Integrated Post-secondary Education Data System (IPEDS) 's yearly release.",
@@ -163,6 +169,9 @@ export const projects: SectionData<Project> = {
             title: "Language Agnostic News Summarizer (LANS)",
             technologies: ["NLP", "PyTorch"],
             link: "https://github.com/yourusername/lans",
+            startDate: "August 2022",
+            endDate: "December 2022",
+            summary: "The Language Agnostic News Summarizer (LANS) is an innovative text summarization tool that employs advanced techniques in both extractive and abstractive summarization to distill the essence of news articles and their headlines. LANS addresses the complexities of human language by comprehensively analyzing the input text and generating concise summaries that accurately capture the contextual significance. By leveraging semantic analysis and context-aware modeling, LANS aims to bridge the gap between human-like comprehension and automated summarization, offering a powerful solution for efficiently extracting key information from news articles in a variety of languages.",
             description: [
                 "Built a generic translation and summarization tool for news articles to measure the title ineptness and any inherent bias.",
                 "Used Meta's M-T5 and RoBERTa RNNs tuned on the CNN Daily News dataset for translation and summarization tasks.",

@@ -1,4 +1,4 @@
-<div fxLayout="column" fxLayoutAlign="start stretch" class="main-container">
+<div fxLayout="column" class="main-container">
   <app-nav-bar [sections]="sections" [currentSection]="currentSection" [sectionOrder]="sectionOrder"
     (sectionChange)="scrollToSection($event)"></app-nav-bar>
   <div fxLayout="row">
@@ -7,9 +7,9 @@
       <app-about-me id="about" [about]="resumeData.about"></app-about-me>
 
       <h1 style="color: white; text-align: center; margin: 2rem;">Education</h1>
-      <section id="education" fxLayout="row" fxLayoutAlign="center" fxLayoutGap="2rem" fxLayout.lt-md="column"
-        fxLayoutAlign.lt-md="space-between">
-        <app-education fxFlex="40" *ngFor="let education of resumeData.education"
+      <section id="education" fxLayout="row" fxLayoutAlign="space-around" fxLayout.lt-lg="column"
+        fxLayoutAlign.lt-lg="space-between">
+        <app-education fxFlex="1 1 40" *ngFor="let education of resumeData.education"
           [education]="education"></app-education>
       </section>
 
@@ -19,7 +19,14 @@
           [workExperience]="experience"></app-work-experience>
       </section>
 
-      <app-projects id="projects" [projects]="resumeData.sections[1]"></app-projects>
+      <h1 style="color: white; text-align: center; margin: 2rem;">Projects</h1>
+      <section id="projects" fxLayout="row" fxLayoutAlign="space-around" fxLayout.lt-lg="column"
+        fxLayoutAlign.lt-lg="space-between">
+        <app-projects fxFlex="1 1 40" id="projects" *ngFor="let project of resumeData.sections[1].data"
+          [project]="project">
+        </app-projects>
+      </section>
+
       <section id="certifications">
         <h2>Certifications</h2>
         <ul>

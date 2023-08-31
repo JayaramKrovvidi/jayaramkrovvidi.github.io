@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Project, SectionData } from 'portfolio-data';
+import { Project } from 'portfolio-data';
 
 @Component({
   selector: 'app-projects',
@@ -9,6 +9,6 @@ import { Project, SectionData } from 'portfolio-data';
 export class ProjectsComponent {
 
   @Input()
-  projects!: SectionData<Project>;
+  project!: Project;
 
 }

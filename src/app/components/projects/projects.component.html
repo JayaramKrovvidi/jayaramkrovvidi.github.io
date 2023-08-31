@@ -1,14 +1,11 @@
-<section id="projects">
-    <h2>{{projects.title}}</h2>
-    <ul>
-        <!-- Loop through the projects array -->
-        <li *ngFor="let project of projects.data">
-            <h3>{{ project.title }}</h3>
-            <p>Technologies: {{ project.technologies.join(', ') }}</p>
-            <a href="{{ project.link }}" target="_blank">GitHub Link</a>
-            <ul>
-                <li *ngFor="let des of project.description">{{ des }}</li>
-            </ul>
-        </li>
+<app-card fxFlex="100">
+    <h2 headerText>{{project.title}}</h2>
+    <ul subHeaderText fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="1rem">
+        <li *ngFor="let tech of project.technologies">{{ tech }}</li>
     </ul>
-</section>
+    <p dates>{{ project.startDate }} - {{ project.endDate }}</p>
+    <!-- <ul description fxLayout="column" fxLayoutAlign="center center">
+        <li *ngFor="let des of project.description">{{ des }}</li>
+    </ul> -->
+    <p description style="text-align: justify;"><i>"{{ project.summary }}"</i></p>
+</app-card>
