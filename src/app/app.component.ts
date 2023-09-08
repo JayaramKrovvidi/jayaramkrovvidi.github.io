@@ -1,4 +1,5 @@
 import { Component, AfterViewInit, HostListener } from '@angular/core';
+declare var VANTA;
 
 @Component({
   selector: 'app-root',
@@ -17,6 +18,18 @@ export class AppComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     this.gradient = document.querySelector('.gradient') as HTMLElement;
     this.updateGradientPosition();
+    VANTA.NET({
+      el: "#vanta",
+      color: 0x606060,
+      backgroundColor: 0x222222,
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00
+    })
   }
 
   @HostListener('mousemove', ['$event'])

@@ -33,7 +33,11 @@
               "@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "./src/scripts/three.r134.min.js",
+              "./src/scripts/vanta.birds.min.js",
+              "./src/scripts/vanta.net.min.js"
+            ]
           },
           "configurations": {
             "production": {
