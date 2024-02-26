@@ -6,6 +6,7 @@ export interface WorkExperience {
     startDate: string;
     endDate: string;
     description: string[];
+    shortSummary: string;
     summary: string;
 }
 
@@ -15,6 +16,7 @@ export interface Project {
     startDate: string;
     endDate: string;
     link?: string;
+    shortSummary: string;
     summary: string;
     description: string[];
 }
@@ -69,8 +71,8 @@ export interface Education {
     startDate: string;
     endDate: string;
     imageUrl: string;
-    shortDescription: string;
-    detailedDescription: string;
+    shortSummary: string;
+    summary: string;
 }
 
 export interface AboutMe {
@@ -96,6 +98,7 @@ export const workExperience: SectionData<WorkExperience> = {
                 "Acted as a Teaching Assistant for CSE 354 (Natural Language Processing) under Prof. Niranjan Balasubramanian.",
                 "Work includes proctoring, conducting office hours, grading, designing assignments, and maintaining lecture notes."
             ],
+            shortSummary: "As a GTA at Stony Brook University, I collaborated with Prof. Niranjan in CSE 354 (NLP), providing structured learning with exams, office hours, and creative assignments. I utilized my technical expertise to empower aspiring computer scientists.",
             summary: "As a Graduate Teaching Assistant at Stony Brook University, I immersed myself in education and academic support, assisting Professor Niranjan Balasubramanian in the course CSE 354 (Natural Language Processing). I fostered a structured learning environment by proctoring exams, conducting office hours for personalized guidance, and designing engaging assignments. I facilitated effective learning, leveraging my technical expertise to contribute to the growth and success of aspiring computer science students."
         },
         {
@@ -113,6 +116,7 @@ export const workExperience: SectionData<WorkExperience> = {
                 "Responsible for maintaining code quality and conducting collaborative code review sessions for juniors and peers.",
                 "Awarded Best Trainer for a comprehensive session on Hibernate, JPA, and Advanced DB Frameworks for new interns."
             ],
+            shortSummary: "As a Senior Software Developer at Accolite, I enhanced CoinSwitch's payment integration with Flask. I optimized user experience, introduced the Streaming Downloader, and addressed 250+ customer concerns promptly.",
             summary: "As a Senior Software Developer at Accolite, I led the design and development of a generic Payments Integration engine in Flask for CoinSwitch, significantly improving code reusability. I implemented load-balancing logic to enhance user responsiveness by dynamically routing payments across gateways. Additionally, I devised the Streaming Downloader, a data source paginator, reducing user wait time by 30%. With a strong focus on maintaining code quality, I conducted collaborative code review sessions and resolved over 250 real-time customer issues with priority-based escalation. Throughout my tenure, I demonstrated expertise in software architecture, problem-solving, and mentoring junior developers."
         },
         {
@@ -129,6 +133,7 @@ export const workExperience: SectionData<WorkExperience> = {
                 "Augmented the backend for a Crew Evaluation service with SQL views, caching & refresh logic, reducing DB hits by 50%.",
                 "Designed a normalized DB schema for an Automated chatbot with configuration, interpolation, and validation modules."
             ],
+            shortSummary: "Key role in CRM Integration Tool. Designed alert system for FedEx, cutting wait times. Automated daily reports, saving time. Optimized Crew Evaluation service, reducing database hits by 50%. Proficient in development, collaboration, and database optimization.",
             summary: "As a Software Developer at Accolite, I played a crucial role in developing a CRM Integration Tool that effectively collected and interpreted data from CRMs such as Salesforce and MS Dynamics 365. Collaborating with a cross-functional team, I contributed to the design and implementation of an alerting push notification system for FedEx, reducing the wait time for their flight crew. I also implemented the full-stack dashboard module for this system, saving valuable time by automating daily report generation. Additionally, I enhanced the backend of a Crew Evaluation service with SQL views, caching, and refresh logic, resulting in a 50% reduction in database hits. My work showcased proficiency in software development, collaboration, and database optimization."
         },
         {
@@ -143,6 +148,7 @@ export const workExperience: SectionData<WorkExperience> = {
                 "Secured Runner up in this training campaign while competing with over 70 interns across all other company locations.",
                 "Implemented all frontend modules for the Pilot Info Tracker with a responsive UI using Angular Flex layout and SCSS."
             ],
+            shortSummary: "Accolite intern. Completed intense 2-month Accolite University. Built front-end for Pilot Info Tracker app with Angular Flex layout and SCSS. Runner-up among 70+ interns. Gained practical skills in full-stack development and UI design.",
             summary: "During my internship at Accolite, I completed an intensive two-month training program called Accolite University, where I gained hands-on experience in the software development life cycle. As part of the program, I developed the front-end modules for the Pilot Info Tracker, a responsive web application using Angular Flex layout and SCSS. I demonstrated my ability to adapt to new technologies while securing the runner-up position among over 70 interns. This experience allowed me to contribute to developing real-world projects and acquire valuable front-end development and user interface design skills."
         }
     ]
@@ -157,6 +163,7 @@ export const projects: SectionData<Project> = {
             link: "https://github.com/yourusername/college-compass",
             startDate: "January 2023",
             endDate: "May 2023",
+            shortSummary: "College Compass: Streamlined higher ed guidance. Visualized data empowers students. Interactive maps, tuition trends, and application stats. Confidence in academic journey. Align aspirations with institutions.",
             summary: "College Compass is a dynamic and user-friendly platform designed to guide students through the complex landscape of higher education. With a seamless integration of data visualization and insightful analytics, it empowers students to make informed decisions about colleges and universities. From interactive maps showcasing campus locations to comprehensive charts depicting tuition trends and application statistics, College Compass provides a holistic view of educational institutions. This tool equips students with the information they need to navigate their academic journey with confidence, enabling them to select institutions that align with their aspirations and goals.",
             description: [
                 "College Compass is a D3.js and Angular-powered visualization dashboard to explore and compare college admission data.",
@@ -171,6 +178,7 @@ export const projects: SectionData<Project> = {
             link: "https://github.com/yourusername/lans",
             startDate: "August 2022",
             endDate: "December 2022",
+            shortSummary: "LANS: Innovative news summarizer. Blends extractive and abstractive methods. Grasps context thoroughly. Employs semantic analysis and context-aware modeling. Effortlessly condenses articles in multiple languages.",
             summary: "The Language Agnostic News Summarizer (LANS) is an innovative text summarization tool that employs advanced techniques in both extractive and abstractive summarization to distill the essence of news articles and their headlines. LANS addresses the complexities of human language by comprehensively analyzing the input text and generating concise summaries that accurately capture the contextual significance. By leveraging semantic analysis and context-aware modeling, LANS aims to bridge the gap between human-like comprehension and automated summarization, offering a powerful solution for efficiently extracting key information from news articles in a variety of languages.",
             description: [
                 "Built a generic translation and summarization tool for news articles to measure the title ineptness and any inherent bias.",
@@ -213,8 +221,8 @@ export const resumeData: ResumeData = {
         startDate: "August 2022",
         endDate: "May 2024",
         imageUrl: "../../../assets/img/sbu-logo.png",
-        shortDescription: "Ms in Computer Science at Stony Brook University",
-        detailedDescription: "In my pursuit of higher knowledge, I embarked on a transformative journey at Stony Brook University for my Master of Science in Computer Science. This academic endeavor has propelled my understanding of advanced concepts, honed my problem-solving skills, and expanded my technical expertise. With a current CGPA of 3.95/4.0, I have been able to dive deep into subjects like data visualization, natural language processing, and computational biology, further enriching my understanding of the diverse facets of computer science. The graduate program at Stony Brook has not only equipped me with cutting-edge knowledge but has also nurtured my ability to collaborate and contribute effectively in a team-oriented environment. This experience has been instrumental in shaping my identity as a dynamic and committed software developer, poised to make significant contributions to the industry."
+        shortSummary: "Ms in Computer Science at Stony Brook University",
+        summary: "In my pursuit of higher knowledge, I embarked on a transformative journey at Stony Brook University for my Master of Science in Computer Science. This academic endeavor has propelled my understanding of advanced concepts, honed my problem-solving skills, and expanded my technical expertise. With a current CGPA of 3.95/4.0, I have been able to dive deep into subjects like data visualization, natural language processing, and computational biology, further enriching my understanding of the diverse facets of computer science. The graduate program at Stony Brook has not only equipped me with cutting-edge knowledge but has also nurtured my ability to collaborate and contribute effectively in a team-oriented environment. This experience has been instrumental in shaping my identity as a dynamic and committed software developer, poised to make significant contributions to the industry."
     },
     {
         degree: "Bachelor of Technology in Computer Science",
@@ -223,8 +231,8 @@ export const resumeData: ResumeData = {
         startDate: "July 2015",
         endDate: "July 2019",
         imageUrl: "../../../assets/img/mit-logo-light.png",
-        shortDescription: "B.Tech in Computer Science at Manipal Institute of Technology",
-        detailedDescription: "During my undergraduate journey at Manipal Institute of Technology (MIT), I had the privilege to immerse myself in the world of Computer Science. With a keen curiosity for intelligent systems, I pursued a Bachelor of Technology degree, specializing in Computer Science. Throughout my studies, I cultivated a solid foundation in a spectrum of subjects, from data structures and algorithms to artificial intelligence and machine learning. My CGPA of 8.72/10 reflects my dedication to academic excellence and my passion for mastering the intricacies of the field. Collaborative projects, engaging coursework, and interactive learning experiences at MIT have significantly shaped my understanding and love for technology, paving the way for my continued growth and accomplishments in the software development arena."
+        shortSummary: "B.Tech in Computer Science at Manipal Institute of Technology",
+        summary: "During my undergraduate journey at Manipal Institute of Technology (MIT), I had the privilege to immerse myself in the world of Computer Science. With a keen curiosity for intelligent systems, I pursued a Bachelor of Technology degree, specializing in Computer Science. Throughout my studies, I cultivated a solid foundation in a spectrum of subjects, from data structures and algorithms to artificial intelligence and machine learning. My CGPA of 8.72/10 reflects my dedication to academic excellence and my passion for mastering the intricacies of the field. Collaborative projects, engaging coursework, and interactive learning experiences at MIT have significantly shaped my understanding and love for technology, paving the way for my continued growth and accomplishments in the software development arena."
     }],
     sections: [workExperience, projects, certifications],
 };

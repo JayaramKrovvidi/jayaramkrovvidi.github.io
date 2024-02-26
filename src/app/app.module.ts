@@ -16,6 +16,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { CardComponent } from './components/card/card.component';
 import { RoundImageDirective } from './directives/roundimage.directive';
+import { TimelineModule } from 'primeng/timeline';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { RoundImageDirective } from './directives/roundimage.directive';
     ProjectsComponent,
     NavBarComponent,
     CardComponent,
-    RoundImageDirective
+    RoundImageDirective,
   ],
   imports: [
     BrowserModule,
@@ -36,7 +37,8 @@ import { RoundImageDirective } from './directives/roundimage.directive';
     MaterialModule,
     FlexLayoutModule,
     HttpClientModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    TimelineModule
   ],
   providers: [],
   bootstrap: [AppComponent]

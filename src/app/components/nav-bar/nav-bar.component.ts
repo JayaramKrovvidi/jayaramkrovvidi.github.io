@@ -46,7 +46,7 @@ export class NavBarComponent {
     });
 
     for (let i = sectionOffsets.length - 1; i >= 0; i--) {
-      if (scrollPosition >= sectionOffsets[i].offsetTop - 100) { // Adjust the offset as needed
+      if (scrollPosition >= sectionOffsets[i].offsetTop - 150) { // Adjust the offset as needed
         this.currentSection = sectionOffsets[i].section;
         break;
       }

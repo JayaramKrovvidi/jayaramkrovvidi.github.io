@@ -6,20 +6,32 @@
     <div fxLayout="column" fxLayoutAlign="start stretch" class="content-container">
       <app-about-me id="about" [about]="resumeData.about"></app-about-me>
 
-      <h1 style="color: white; text-align: center;">Education</h1>
-      <div id="education" fxFlex="80" fxLayout="row" fxLayoutAlign.gt-md="space-between" fxLayout.lt-lg="column">
+      <h1 id="education" style="color: white; text-align: center; margin: 2rem;">Education</h1>
+      <p-timeline [value]="resumeData.education" [align]="'alternate'">
+        <ng-template pTemplate="content" let-education>
+          <app-education [education]="education"></app-education>
+        </ng-template>
+      </p-timeline>
+
+      <h1 id="experience" style="color: white; text-align: center; margin: 2rem;">Work Experience</h1>
+      <p-timeline [value]="resumeData.sections[0].data" [align]="'alternate'">
+        <ng-template pTemplate="content" let-experience>
+          <app-work-experience [workExperience]="experience"></app-work-experience>
+        </ng-template>
+      </p-timeline>
+
+      <!-- <div id="education" fxFlex="80" fxLayout="row" fxLayoutAlign.gt-md="space-between" fxLayout.lt-lg="column">
         <app-education fxFlex.gt-md="1 1 40" *ngFor="let education of resumeData.education"
           [education]="education"></app-education>
-      </div>
+      </div> -->
 
-      <h1 style="color: white; text-align: center;">Work Experience</h1>
-      <div id="experience" fxLayout="column" fxLayoutAlign="space-between center">
+      <!-- <div id="experience" fxLayout="column" fxLayoutAlign="space-between center">
         <app-work-experience *ngFor="let experience of resumeData.sections[0].data"
           [workExperience]="experience"></app-work-experience>
-      </div>
+      </div> -->
 
-      <h1 style="color: white; text-align: center;">Projects</h1>
-      <div id="projects" fxLayout="row" fxLayoutAlign="space-around" fxLayout.lt-lg="column"
+      <h1 id="projects" style="color: white; text-align: center; margin: 2rem;">Projects</h1>
+      <div fxLayout="row" fxLayoutAlign="space-around" fxLayout.lt-lg="column"
         fxLayoutAlign.lt-lg="space-between">
         <app-projects fxFlex.gt-md="1 1 40" id="projects" *ngFor="let project of resumeData.sections[1].data"
           [project]="project">
