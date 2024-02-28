@@ -31,12 +31,12 @@ export const NavHeader = ({ className, collapseBreakpointClass = "lg" }) => {
     const logoLink = (<LogoLink>JDK</LogoLink>);
     const links = [
         <NavLinks key={1}>
-            <NavLink to="about" smooth={true} duration={500}>About Me</NavLink>
-            <NavLink to="education" smooth={true} duration={500}>Education</NavLink>
-            <NavLink to="experience" smooth={true} duration={500}>Experience</NavLink>
-            <NavLink to="skills" smooth={true} duration={500}>Skills</NavLink>
-            <NavLink to="projects" smooth={true} duration={500}>Projects</NavLink>
-            <ExternalPrimaryLink css={tw`rounded-xl`} target="_blank" href="https://drive.google.com/file/d/1CPe0G98qblWwtBK3YHtY3v775igtSLNR/view?usp=sharing">My Resume</ExternalPrimaryLink>
+            <NavLink onClick={toggleNavbar} to="about" smooth={true} duration={500}>About Me</NavLink>
+            <NavLink onClick={toggleNavbar} to="education" smooth={true} duration={500}>Education</NavLink>
+            <NavLink onClick={toggleNavbar} to="experience" smooth={true} duration={500}>Experience</NavLink>
+            <NavLink onClick={toggleNavbar} to="skills" smooth={true} duration={500}>Skills</NavLink>
+            <NavLink onClick={toggleNavbar} to="projects" smooth={true} duration={500}>Projects</NavLink>
+            <ExternalPrimaryLink onClick={toggleNavbar} css={tw`rounded-xl`} target="_blank" href="https://drive.google.com/file/d/1CPe0G98qblWwtBK3YHtY3v775igtSLNR/view?usp=sharing">My Resume</ExternalPrimaryLink>
         </NavLinks>
     ]
 
@@ -52,9 +52,12 @@ export const NavHeader = ({ className, collapseBreakpointClass = "lg" }) => {
                 <MobileNavLinks initial={{ x: "150%", display: "none" }} animate={animation} css={collapseBreakpointCss.mobileNavLinks}>
                     {links}
                 </MobileNavLinks>
-                <NavToggle onClick={toggleNavbar} className={showNavLinks ? "open" : "closed"}>
-                    {showNavLinks ? <X tw="w-6 h-6" /> : <Menu tw="w-6 h-6" />}
-                </NavToggle>
+                {
+                    showNavLinks ?
+                        <NavToggle tw="right-0 mr-8 fixed" onClick={toggleNavbar} className="open"><X tw="w-6 h-6" /></NavToggle>
+                        :
+                        <NavToggle onClick={toggleNavbar} className="closed"><Menu tw="w-6 h-6" /></NavToggle>
+                }
             </MobileNavLinksContainer>
         </Header>
     );
