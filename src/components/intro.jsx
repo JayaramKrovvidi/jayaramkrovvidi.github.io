@@ -41,7 +41,7 @@ export const IntroSection = () => {
                     </LeftColumn>
                     <RightColumn>
                         <IllustrationContainer>
-                            <img style={ tw`min-w-0 w-full max-w-lg xl:max-w-3xl` } src={IntroImage} alt="Intro Image" />
+                            <img css={ tw`min-w-0 w-full max-w-lg xl:max-w-3xl` } src={IntroImage} alt="Intro Image" />
                         </IllustrationContainer>
                     </RightColumn>
                 </TwoColumn>

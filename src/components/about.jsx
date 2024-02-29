@@ -1,4 +1,5 @@
 import tw from "twin.macro";
+import { css } from "styled-components/macro";
 import { Element } from "react-scroll";
 import WorkingImage from '../assets/working-with-caffeine.svg';
 
@@ -17,7 +18,7 @@ export const AboutSection = () => {
             <TwoColumn>
                 <LeftColumn>
                     <IllustrationContainer>
-                        <img style={tw`min-w-0 w-full max-w-3xl xl:max-w-4xl`} src={WorkingImage} alt="Working Image" />
+                        <img css={tw`min-w-0 w-full max-w-3xl xl:max-w-4xl`} src={WorkingImage} alt="Working Image" />
                     </IllustrationContainer>
                 </LeftColumn>
                 <RightColumn>

@@ -1,4 +1,5 @@
 import tw from "twin.macro";
+import { css } from "styled-components/macro";
 import { useState } from "react";
 import { Menu, X } from "react-feather";
 import { useAnimation, useCycle } from "framer-motion";
@@ -49,7 +50,7 @@ export const NavHeader = () => {
 
             <MobileNavLinksContainer css={collapseBreakpointCss.mobileNavLinksContainer}>
                 {logoLink}
-                <section style={tw`flex flex-row justify-end`}>
+                <section css={tw`flex flex-row justify-end`}>
                     <ExternalLink css={tw`bg-transparent text-primary-500 mr-6 border-b-2 border-primary-500 sticky`} target="_blank" href="https://drive.google.com/file/d/1CPe0G98qblWwtBK3YHtY3v775igtSLNR/view?usp=sharing">My Resume</ExternalLink>
                     <MobileNavLinks initial={{ x: "150%", display: "none" }} animate={animation} css={collapseBreakpointCss.mobileNavLinks}>
                         {links}
