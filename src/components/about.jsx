@@ -17,13 +17,13 @@ export const AboutSection = () => {
             <TwoColumn>
                 <LeftColumn>
                     <IllustrationContainer>
-                        <img tw="min-w-0 w-full max-w-3xl xl:max-w-4xl" src={WorkingImage} alt="Working Image" />
+                        <img style={tw`min-w-0 w-full max-w-3xl xl:max-w-4xl`} src={WorkingImage} alt="Working Image" />
                     </IllustrationContainer>
                 </LeftColumn>
                 <RightColumn>
                     <Subheading>About Me</Subheading>
                     <Heading>There is a lot, but let me summarize</Heading>
-                    <Description>I'm a passionate full-stack developer and data analyst with 3+ years of experience in the Software Industry. I break down and develop complicated products and bring them to life for clients and stakeholders. Open to connecting with like-minded professionals and exploring new challenges in the tech industry.</Description>
+                    <Description>I&apos;m a passionate full-stack developer and data analyst with 3+ years of experience in the Software Industry. I break down and develop complicated products and bring them to life for clients and stakeholders. Open to connecting with like-minded professionals and exploring new challenges in the tech industry.</Description>
                 </RightColumn>
             </TwoColumn>
         </Container>

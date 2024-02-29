@@ -1,14 +1,13 @@
 import tw from "twin.macro";
 import { useState } from "react";
 import { Menu, X } from "react-feather";
-import { css } from "styled-components/macro";
 import { useAnimation, useCycle } from "framer-motion";
 import {
     DesktopNavLinks, Header, LogoLink, MobileNavLinks,
     MobileNavLinksContainer, NavLink, NavLinks, NavToggle, ExternalPrimaryLink, ExternalLink
 } from "./TwinStyledComponents";
 
-export const useAnimatedNavToggler = () => {
+const useAnimatedNavToggler = () => {
     const [showNavLinks, setShowNavLinks] = useState(false);
     const [x, cycleX] = useCycle("0%", "150%");
     const animation = useAnimation();
@@ -23,10 +22,10 @@ export const useAnimatedNavToggler = () => {
 }
 
 
-export const NavHeader = ({ className, collapseBreakpointClass = "lg" }) => {
+export const NavHeader = () => {
 
     const { showNavLinks, animation, toggleNavbar } = useAnimatedNavToggler();
-    const collapseBreakpointCss = collapseBreakPointCssMap[collapseBreakpointClass];
+    const collapseBreakpointCss = collapseBreakPointCssMap["lg"];
 
     const logoLink = (<LogoLink>JDK</LogoLink>);
     const links = [
@@ -41,7 +40,7 @@ export const NavHeader = ({ className, collapseBreakpointClass = "lg" }) => {
     ]
 
     return (
-        <Header className={className || "header-light"}>
+        <Header className="header-light">
             <DesktopNavLinks css={collapseBreakpointCss.desktopNavLinks}>
                 {logoLink}
                 {links}
@@ -50,7 +49,7 @@ export const NavHeader = ({ className, collapseBreakpointClass = "lg" }) => {
 
             <MobileNavLinksContainer css={collapseBreakpointCss.mobileNavLinksContainer}>
                 {logoLink}
-                <section css={tw`flex flex-row justify-end`}>
+                <section style={tw`flex flex-row justify-end`}>
                     <ExternalLink css={tw`bg-transparent text-primary-500 mr-6 border-b-2 border-primary-500 sticky`} target="_blank" href="https://drive.google.com/file/d/1CPe0G98qblWwtBK3YHtY3v775igtSLNR/view?usp=sharing">My Resume</ExternalLink>
                     <MobileNavLinks initial={{ x: "150%", display: "none" }} animate={animation} css={collapseBreakpointCss.mobileNavLinks}>
                         {links}

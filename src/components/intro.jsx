@@ -21,7 +21,7 @@ export const IntroSection = () => {
                 <TwoColumn>
                     <LeftColumn>
                         <Heading>
-                            👋 Hi, I'm Jayarama Das Krovvidi, a <HighlightedText>Full-Stack Developer and Data Scientist</HighlightedText>
+                            👋 Hi, I&apos;m Jayarama Das Krovvidi, a <HighlightedText>Full-Stack Developer and Data Scientist</HighlightedText>
                         </Heading>
                         <Paragraph>
                             {/* I'm a passionate full-stack developer and data analyst with 3+ years of experience in the Software Industry. I break down and develop complicated products and bring them to life for clients and stakeholders. Open to connecting with like-minded professionals and exploring new challenges in the tech industry. */}
@@ -41,7 +41,7 @@ export const IntroSection = () => {
                     </LeftColumn>
                     <RightColumn>
                         <IllustrationContainer>
-                            <img tw="min-w-0 w-full max-w-lg xl:max-w-3xl" src={IntroImage} alt="Intro Image" />
+                            <img style={ tw`min-w-0 w-full max-w-lg xl:max-w-3xl` } src={IntroImage} alt="Intro Image" />
                         </IllustrationContainer>
                     </RightColumn>
                 </TwoColumn>
