@@ -8,7 +8,7 @@ export const Subheading = tw.span`uppercase tracking-widest font-bold text-prima
 export const HighlightedText = tw.span`text-primary-500`;
 
 export const Container = tw.div`relative`;
-export const TwoColumn = tw.div`flex flex-col lg:flex-row lg:items-center max-w-screen-xl mx-auto py-20 md:py-24`;
+export const TwoColumn = tw.div`flex flex-col lg:flex-row lg:items-center max-w-screen-xl mx-auto py-10 md:py-24`;
 export const LeftColumn = tw.div`relative lg:w-5/12 text-center max-w-lg mx-auto lg:max-w-none lg:text-left`;
 export const RightColumn = tw.div`relative mt-12 lg:mt-0 flex-1 flex flex-col justify-center lg:self-end`;
 

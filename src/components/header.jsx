@@ -5,7 +5,7 @@ import { css } from "styled-components/macro";
 import { useAnimation, useCycle } from "framer-motion";
 import {
     DesktopNavLinks, Header, LogoLink, MobileNavLinks,
-    MobileNavLinksContainer, NavLink, NavLinks, NavToggle, ExternalPrimaryLink
+    MobileNavLinksContainer, NavLink, NavLinks, NavToggle, ExternalPrimaryLink, ExternalLink
 } from "./TwinStyledComponents";
 
 export const useAnimatedNavToggler = () => {
@@ -47,18 +47,21 @@ export const NavHeader = ({ className, collapseBreakpointClass = "lg" }) => {
                 {links}
             </DesktopNavLinks>
 
+
             <MobileNavLinksContainer css={collapseBreakpointCss.mobileNavLinksContainer}>
                 {logoLink}
-                <MobileNavLinks initial={{ x: "150%", display: "none" }} animate={animation} css={collapseBreakpointCss.mobileNavLinks}>
-                    {links}
-                </MobileNavLinks>
-                {
-                    showNavLinks ?
-                        <NavToggle tw="right-0 mr-8 fixed" onClick={toggleNavbar} className="open"><X tw="w-6 h-6" /></NavToggle>
-                        :
-                        <NavToggle onClick={toggleNavbar} className="closed"><Menu tw="w-6 h-6" /></NavToggle>
-                }
+                <section css={tw`flex flex-row justify-end`}>
+                    <ExternalLink css={tw`bg-transparent text-primary-500 mr-6 border-b-2 border-primary-500 sticky`} target="_blank" href="https://drive.google.com/file/d/1CPe0G98qblWwtBK3YHtY3v775igtSLNR/view?usp=sharing">My Resume</ExternalLink>
+                    <MobileNavLinks initial={{ x: "150%", display: "none" }} animate={animation} css={collapseBreakpointCss.mobileNavLinks}>
+                        {links}
+                    </MobileNavLinks>
+                    {showNavLinks ? <NavToggle tw="right-0 mr-8 mt-3 fixed" animate={animation} onClick={toggleNavbar}><X tw="w-6 h-6" /></NavToggle> : <></>}
+                    <NavToggle onClick={toggleNavbar}>
+                        {showNavLinks ? <Menu tw="w-6 h-6 stroke-0" /> : <Menu tw="w-6 h-6" />}
+                    </NavToggle>
+                </section>
             </MobileNavLinksContainer>
+
         </Header>
     );
 };
