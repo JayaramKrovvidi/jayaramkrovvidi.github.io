@@ -32,10 +32,10 @@ export const NavHeader = () => {
     const links = [
         <NavLinks key={1}>
             <NavLink onClick={toggleNavbar} to="about" smooth={true} duration={500}>About Me</NavLink>
-            <NavLink onClick={toggleNavbar} to="education" smooth={true} duration={500}>Education</NavLink>
+            <NavLink onClick={toggleNavbar} to="education" smooth={true} duration={700}>Education</NavLink>
+            <NavLink onClick={toggleNavbar} to="projects" smooth={true} duration={1000}>Projects</NavLink>
             <NavLink onClick={toggleNavbar} to="experience" smooth={true} duration={500}>Experience</NavLink>
             <NavLink onClick={toggleNavbar} to="skills" smooth={true} duration={500}>Skills</NavLink>
-            <NavLink onClick={toggleNavbar} to="projects" smooth={true} duration={500}>Projects</NavLink>
             <ExternalPrimaryLink onClick={toggleNavbar} css={tw`rounded-xl`} target="_blank" href="https://drive.google.com/file/d/1CPe0G98qblWwtBK3YHtY3v775igtSLNR/view?usp=sharing">My Resume</ExternalPrimaryLink>
         </NavLinks>
     ]
