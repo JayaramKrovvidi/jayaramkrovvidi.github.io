@@ -15,7 +15,7 @@ const ProjectContainer = tw.div`max-w-sm my-5 sm:pt-3 sm:max-w-xl lg:max-w-3xl`;
 const Project = tw.a`flex flex-col h-full bg-gray-200 rounded-lg items-center lg:flex-row`;
 const ProjectImage = styled.div`
   ${props => css`background-image: url("${props.imageSrc}");`}
-  ${tw`h-64 bg-center bg-cover w-full rounded-t-lg sm:h-80 sm:min-h-full lg:w-1/2 group-hocus:text-primary-500`}
+  ${tw`h-56 bg-center bg-cover w-full rounded-t-lg sm:h-80 sm:min-h-full lg:w-1/2 group-hocus:text-primary-500`}
 `;
 const ProjectText = tw.div`flex-1 px-6 py-8 pl-8 pr-5`
 const ProjectTitle = tw.h6`font-bold transition duration-300 text-2xl`;
@@ -60,6 +60,32 @@ export const ProjectsSection = () => {
 const projects = [
     {
         postImageSrc: "https://wallpapercave.com/wp/wp4048659.jpg",
+        title: "Portfolio Website",
+        description: "A personal portfolio website designed to showcase my professional journey, skills, and projects, and to connect with the global community of tech enthusiasts and professionals. (P.S. You're already here!)",
+        url: "https://github.com/JayaramKrovvidi/jayaramkrovvidi.github.io",
+        tech_icons: [
+            "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+            "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
+            "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg",
+            "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-plain-wordmark.svg",
+            "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/babel/babel-original.svg"
+        ]
+    },
+    {
+        postImageSrc: "https://t3.ftcdn.net/jpg/05/71/05/98/240_F_571059865_Q7LSnzlvWTpIxYShZk8AMoWZpR7Wef0E.jpg",
+        title: "The E-Less Enigma",
+        description: "This project explores the land of paraphrasing and constrained text generation while producing human readable and highly coherent text without the ubiquitous alphabet 'e'.",
+        url: "https://github.com/JayaramKrovvidi/e-less-enigma",
+        tech_icons: [
+            "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
+            "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jupyter/jupyter-original-wordmark.svg",
+            "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytorch/pytorch-original-wordmark.svg",
+            "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matplotlib/matplotlib-original-wordmark.svg",
+            "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original-wordmark.svg"
+        ]
+    },
+    {
+        postImageSrc: "https://i.pinimg.com/564x/f2/4b/1c/f24b1cb9707122a01132a8bb8bf7df6a.jpg",
         title: "College Compass",
         description: "A comprehensive web application for college exploration, comparison, and decision-making, powered by data analytics and interactive visualizations.",
         url: "https://github.com/JayaramKrovvidi/College-Compass",
