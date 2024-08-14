@@ -21,7 +21,7 @@ export const IntroSection = () => {
                 <TwoColumn>
                     <LeftColumn>
                         <Heading>
-                            👋 Hi, I&apos;m Jayarama Das Krovvidi, a <HighlightedText>Full-Stack Developer and Data Scientist</HighlightedText>
+                            👋 Hi, I&apos;m Jayarama Das Krovvidi, a <HighlightedText>Software Developer and Data Scientist</HighlightedText>
                         </Heading>
                         <Paragraph>
                             {/* I'm a passionate full-stack developer and data analyst with 3+ years of experience in the Software Industry. I break down and develop complicated products and bring them to life for clients and stakeholders. Open to connecting with like-minded professionals and exploring new challenges in the tech industry. */}

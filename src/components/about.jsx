@@ -24,7 +24,7 @@ export const AboutSection = () => {
                 <RightColumn>
                     <Subheading>About Me</Subheading>
                     <Heading>There is a lot, but let me summarize</Heading>
-                    <Description>I&apos;m a passionate full-stack developer and data analyst with 3+ years of experience in the Software Industry. I break down and develop complicated products and bring them to life for clients and stakeholders. Open to connecting with like-minded professionals and exploring new challenges in the tech industry.</Description>
+                    <Description>I&apos;m a passionate Software Developer and Data Scientist with 3+ years of experience in the Software Industry. I break down and develop complicated products and bring them to life for clients and stakeholders. Open to connecting with like-minded professionals and exploring new challenges in the tech industry.</Description>
                 </RightColumn>
             </TwoColumn>
         </Container>
